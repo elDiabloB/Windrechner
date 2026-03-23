@@ -183,7 +183,7 @@ function drawCompass(rwy, wd, ws, hw, xw){
         const xwEy = cy + pUy * Math.abs(xw) * scale * xwDir;
 
         //Gesamtwind
-        const wA = (wd-90)* Math.PI / 180;
+        const wA = (wd-90 +180)* Math.PI / 180;
         const fwEx = cx + Math.cos(wA) * ws * scale;
         const fwEy = cy + Math.sin(wA) * ws * scale;
 
