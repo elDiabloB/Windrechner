@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windrechner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header></header>
+  <body>
+    <h1>Wind<span>rechner</span></h1>
+
+    <div class="card">
+      <div class="inputs">
+        <div class="input-group">
+          <label>Windrichtung</label>
+          <input type="number" id="windDir" value="270" />
+          <span class="unit">° woher</span>
+        </div>
+        <div class="input-group">
+          <label>Windstärke</label>
+          <input type="number" id="windSpd" value="15" />
+          <span class="unit">KT</span>
+        </div>
+        <div class="input-group">
+          <label>Runway HDG</label>
+          <input type="number" id="rwyHdg" value="240" />
+          <span class="unit">° Landekurs</span>
+        </div>
+      </div>
+
+      <div class="limit-row">
+        <div class="input-group">
+          <label>Max. Seitenwind</label>
+          <input type="number" id="xwLimit" value="15" min="1" max="40" />
+          <span class="unit">KT · Limit</span>
+        </div>
+      </div>
+
+      <div class="compass-row">
+        <canvas id="compass" width="380" height="380"></canvas>
+      </div>
+
+      <div class="results">
+        <div class="result-box box-head">
+          <div class="tag" id="hwTag">Headwind</div>
+          <div class="value" id="hwVal">–</div>
+          <div class="sub" id="hwLabel">KT</div>
+        </div>
+        <div class="result-box box-cross">
+          <div class="tag">Crosswind</div>
+          <div class="value" id="xwVal">–</div>
+          <div class="sub" id="xwLabel">KT</div>
+        </div>
+      </div>
+
+      <div id="warning"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+  <footer>
+    (C)2026 Josef Weiß
+    <a href="mailto:weiss.josef1987@googlemail.com">Mail schreiben</a>
+  </footer>
+</html>
