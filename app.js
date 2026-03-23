@@ -164,7 +164,7 @@ function drawCompass(rwy, wd, ws, hw, xw){
 
     // Kopasspfeile zeichnen
     if (ws > 0){
-        const scale = 100/20 // 20KT = 100px
+        const scale = 50/10 // 20KT = 100px
 
         //Einheitsvektoren (Entlang/Quer Runway)
         const rUx = Math.cos(rwyA); // längs Bahn
